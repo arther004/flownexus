@@ -1,0 +1,6 @@
+{
+  "name": "OmniCampus — Smart University & Digital Education Platform",
+  "description": "Centralized smart campus management system for students, faculty, and administrators to track timetables, smart classrooms, assignments, events, announcements, and Supabase cloud persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

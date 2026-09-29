@@ -1,0 +1,292 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <!-- Background Vignette Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stopColor="#0a1532" />
+      <stop offset="50%" stopColor="#050a19" />
+      <stop offset="100%" stopColor="#02040b" />
+    </radialGradient>
+
+    <!-- Orbital Crescent Swoosh Glow -->
+    <linearGradient id="orbitGlow" x1="10%" y1="90%" x2="90%" y2="10%">
+      <stop offset="0%" stopColor="#22d3ee" stopOpacity="0" />
+      <stop offset="30%" stopColor="#22d3ee" stopOpacity="0.8" />
+      <stop offset="65%" stopColor="#67e8f9" stopOpacity="1" />
+      <stop offset="90%" stopColor="#ffffff" stopOpacity="1" />
+      <stop offset="100%" stopColor="#38bdf8" stopOpacity="0" />
+    </linearGradient>
+
+    <!-- Hexagon Frame Gradient -->
+    <linearGradient id="hexFrame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#67e8f9" />
+      <stop offset="45%" stopColor="#22d3ee" />
+      <stop offset="85%" stopColor="#38bdf8" />
+      <stop offset="100%" stopColor="#818cf8" />
+    </linearGradient>
+
+    <!-- Core Neural Loop Gradient -->
+    <linearGradient id="coreLoop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#ffffff" />
+      <stop offset="35%" stopColor="#67e8f9" />
+      <stop offset="70%" stopColor="#22d3ee" />
+      <stop offset="100%" stopColor="#0284c7" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="neonBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="15" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark Deep Space Canvas -->
+  <rect width="1280" height="720" fill="url(#bgGlow)" />
+
+  <!-- Hexagonal Grid Mesh Watermark (Subtle Background Pattern from original photo) -->
+  <g opacity="0.08" stroke="#38bdf8" strokeWidth="1.2" fill="none">
+    <polygon points="120,140 180,105 240,140 240,210 180,245 120,210" />
+    <polygon points="240,140 300,105 360,140 360,210 300,245 240,210" />
+    <polygon points="1040,140 1100,105 1160,140 1160,210 1100,245 1040,210" />
+    <polygon points="980,500 1040,465 1100,500 1100,570 1040,605 980,570" />
+    <polygon points="140,480 200,445 260,480 260,550 200,585 140,550" />
+  </g>
+
+  <!-- Distant Background Micro-Star Constellation Dots -->
+  <g fill="#38bdf8" opacity="0.45">
+    <circle cx="210" cy="180" r="1.5" />
+    <circle cx="340" cy="110" r="1.5" />
+    <circle cx="1020" cy="130" r="2" />
+    <circle cx="1120" cy="220" r="1.5" />
+    <circle cx="190" cy="540" r="1.5" />
+    <circle cx="1060" cy="560" r="2" />
+    <circle cx="1180" cy="480" r="1.5" />
+  </g>
+
+  <!-- Outer Satellite Constellation Network (Interconnected Cyber Mesh) -->
+  <g stroke="#22d3ee" strokeWidth="1.4" opacity="0.45">
+    <!-- Top & Diagonal lines -->
+    <line x1="640" y1="125" x2="735" y2="155" />
+    <line x1="640" y1="125" x2="545" y2="155" />
+    <line x1="640" y1="125" x2="640" y2="70" strokeDasharray="3 4" />
+
+    <!-- Right Side Satellite Mesh -->
+    <line x1="810" y1="225" x2="870" y2="305" />
+    <line x1="870" y1="305" x2="810" y2="425" />
+    <line x1="870" y1="305" x2="880" y2="400" strokeDasharray="2 3" />
+    <line x1="810" y1="425" x2="850" y2="480" />
+    <line x1="810" y1="425" x2="730" y2="525" />
+
+    <!-- Left Side Satellite Mesh -->
+    <line x1="470" y1="225" x2="410" y2="315" />
+    <line x1="410" y1="315" x2="470" y2="425" />
+    <line x1="410" y1="315" x2="430" y2="480" strokeDasharray="2 3" />
+    <line x1="470" y1="425" x2="550" y2="525" />
+    <line x1="470" y1="425" x2="430" y2="480" />
+
+    <!-- Satellite Web Diagonals -->
+    <line x1="410" y1="315" x2="515" y2="250" strokeDasharray="3 4" opacity="0.6" />
+    <line x1="870" y1="305" x2="765" y2="250" strokeDasharray="3 4" opacity="0.6" />
+  </g>
+
+  <!-- Constellation Nodes (Satellite Glowing Dots) -->
+  <g fill="#22d3ee" filter="url(#starGlow)">
+    <circle cx="410" cy="315" r="4.5" />
+    <circle cx="870" cy="305" r="4.5" />
+    <circle cx="515" cy="140" r="3.5" />
+    <circle cx="765" cy="140" r="3.5" />
+    <circle cx="430" cy="480" r="4" />
+    <circle cx="850" cy="480" r="4" />
+    <circle cx="640" cy="70" r="3" />
+  </g>
+
+  <!-- Four-Pointed Starlight Sparkles (Iconic Star in lower-right of original image) -->
+  <g fill="#38bdf8" filter="url(#starGlow)">
+    <!-- Main lower-right star -->
+    <path d="M 1165 600 Q 1165 620 1185 620 Q 1165 620 1165 640 Q 1165 620 1145 620 Q 1165 620 1165 600 Z" opacity="0.85" />
+    <!-- Secondary subtle top-right sparkle -->
+    <path d="M 875 110 Q 875 120 885 120 Q 875 120 875 130 Q 875 120 865 120 Q 875 120 875 110 Z" opacity="0.7" />
+  </g>
+
+  <!-- ==================== MAIN EMBLEM ==================== -->
+  <!-- Outer Hexagon Frame -->
+  <g filter="url(#neonBlur)">
+    <polygon
+      points="640,125 810,225 810,425 640,525 470,425 470,225"
+      stroke="url(#hexFrame)"
+      strokeWidth="6"
+      strokeLinejoin="round"
+      fill="rgba(6, 14, 34, 0.55)"
+    />
+
+    <!-- Dotted Tracks on the Top Facets (Identical to reference image) -->
+    <line x1="505" y1="205" x2="610" y2="142" stroke="#67e8f9" strokeWidth="3.2" strokeDasharray="6 6" />
+    <line x1="670" y1="142" x2="775" y2="205" stroke="#67e8f9" strokeWidth="3.2" strokeDasharray="6 6" />
+
+    <!-- Inner Concentric Hexagon Outline -->
+    <polygon
+      points="640,155 785,240 785,410 640,495 495,410 495,240"
+      stroke="#22d3ee"
+      strokeWidth="2.5"
+      strokeOpacity="0.4"
+      fill="none"
+    />
+  </g>
+
+  <!-- Hexagon Corner Node Vertices (6 Bulbs with white/cyan core) -->
+  <g fill="#f0f9ff" stroke="#0284c7" strokeWidth="3.5" filter="url(#starGlow)">
+    <circle cx="640" cy="125" r="11" />
+    <circle cx="810" cy="225" r="11" />
+    <circle cx="810" cy="425" r="11" />
+    <circle cx="640" cy="525" r="11" />
+    <circle cx="470" cy="425" r="11" />
+    <circle cx="470" cy="225" r="11" />
+  </g>
+  <!-- Node Center Pinpoints -->
+  <g fill="#22d3ee">
+    <circle cx="640" cy="125" r="5" />
+    <circle cx="810" cy="225" r="5" />
+    <circle cx="810" cy="425" r="5" />
+    <circle cx="640" cy="525" r="5" />
+    <circle cx="470" cy="425" r="5" />
+    <circle cx="470" cy="225" r="5" />
+  </g>
+
+  <!-- Sweeping Electric Crescent Swoosh (Orbital Arc wrapping left side) -->
+  <g filter="url(#neonBlur)">
+    <path
+      d="M 475 445 C 400 365, 405 240, 475 170 C 525 120, 595 100, 665 105"
+      stroke="url(#orbitGlow)"
+      strokeWidth="14"
+      strokeLinecap="round"
+      fill="none"
+    />
+    <path
+      d="M 475 445 C 400 365, 405 240, 475 170 C 525 120, 595 100, 665 105"
+      stroke="#ffffff"
+      strokeWidth="4"
+      strokeLinecap="round"
+      fill="none"
+    />
+  </g>
+
+  <!-- Central Core: Neural Brain Crown & Infinity Loop (∞) -->
+  <g filter="url(#neonBlur)">
+    <!-- Infinity Loop (∞) -->
+    <path
+      d="M 595 350
+         C 555 315, 525 325, 525 355
+         C 525 390, 565 402, 600 372
+         L 680 325
+         C 715 295, 755 307, 755 342
+         C 755 377, 725 390, 685 355
+         L 595 350 Z"
+      stroke="url(#coreLoop)"
+      strokeWidth="8.5"
+      strokeLinejoin="round"
+      fill="none"
+    />
+    <!-- Pure White Specular Core of the Infinity Loop -->
+    <path
+      d="M 595 350
+         C 555 315, 525 325, 525 355
+         C 525 390, 565 402, 600 372
+         L 680 325
+         C 715 295, 755 307, 755 342
+         C 755 377, 725 390, 685 355
+         L 595 350 Z"
+      stroke="#ffffff"
+      strokeWidth="3"
+      strokeLinejoin="round"
+      fill="none"
+    />
+
+    <!-- Neural Brain Lobes (Top Cloud Structure) -->
+    <path
+      d="M 565 320
+         C 550 290, 555 250, 590 242
+         C 608 238, 624 252, 640 264
+         C 656 252, 672 238, 690 242
+         C 725 250, 730 290, 715 320"
+      stroke="url(#coreLoop)"
+      strokeWidth="7"
+      strokeLinecap="round"
+      fill="none"
+    />
+    <!-- Brain Specular Highlight Line -->
+    <path
+      d="M 565 320
+         C 550 290, 555 250, 590 242
+         C 608 238, 624 252, 640 264
+         C 656 252, 672 238, 690 242
+         C 725 250, 730 290, 715 320"
+      stroke="#ffffff"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      fill="none"
+    />
+
+    <!-- Synaptic Internal Traces -->
+    <line x1="640" y1="248" x2="640" y2="315" stroke="#38bdf8" strokeWidth="4.5" strokeLinecap="round" />
+    <line x1="605" y1="265" x2="622" y2="292" stroke="#38bdf8" strokeWidth="3.5" strokeLinecap="round" />
+    <line x1="675" y1="265" x2="658" y2="292" stroke="#38bdf8" strokeWidth="3.5" strokeLinecap="round" />
+
+    <!-- Lower Circuit Traces (Extending from infinity loop) -->
+    <path d="M 622 390 L 622 445 L 595 458" stroke="#38bdf8" strokeWidth="4" strokeLinecap="round" fill="none" />
+    <path d="M 658 390 L 658 445 L 685 458" stroke="#38bdf8" strokeWidth="4" strokeLinecap="round" fill="none" />
+    <line x1="640" y1="395" x2="640" y2="470" stroke="#38bdf8" strokeWidth="4" strokeLinecap="round" />
+  </g>
+
+  <!-- Internal Circuit Micro-Nodes -->
+  <g fill="#f0f9ff" filter="url(#starGlow)">
+    <circle cx="640" cy="248" r="5" />
+    <circle cx="590" cy="242" r="4.5" />
+    <circle cx="690" cy="242" r="4.5" />
+    <circle cx="595" cy="458" r="4.5" />
+    <circle cx="685" cy="458" r="4.5" />
+    <circle cx="640" cy="470" r="5" />
+    <circle cx="640" cy="336" r="5.5" fill="#38bdf8" />
+  </g>
+
+  <!-- ==================== TYPOGRAPHY ==================== -->
+  <!-- "NEXUS" in Bold Crisp White -->
+  <text
+    x="640"
+    y="615"
+    text-anchor="middle"
+    fill="#ffffff"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    font-size="64"
+    font-weight="900"
+    letter-spacing="14"
+  >
+    NEXUS
+  </text>
+
+  <!-- "FLOW" in Vibrant Neon Cyan -->
+  <text
+    x="640"
+    y="668"
+    text-anchor="middle"
+    fill="#38bdf8"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    font-size="34"
+    font-weight="800"
+    letter-spacing="24"
+    filter="url(#starGlow)"
+  >
+    FLOW
+  </text>
+</svg>

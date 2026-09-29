@@ -1,0 +1,344 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Azure Sky Gradient with Bright Sunlight Dispersion -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#1d4ed8" />
+      <stop offset="20%" stopColor="#38bdf8" />
+      <stop offset="50%" stopColor="#7dd3fc" />
+      <stop offset="75%" stopColor="#bae6fd" />
+      <stop offset="100%" stopColor="#e0f2fe" />
+    </linearGradient>
+
+    <!-- Sun Flare & Glow -->
+    <radialGradient id="sunGlow" cx="62%" cy="14%" r="50%">
+      <stop offset="0%" stopColor="#fffbeb" stopOpacity="0.9" />
+      <stop offset="15%" stopColor="#fef08a" stopOpacity="0.6" />
+      <stop offset="40%" stopColor="#bae6fd" stopOpacity="0.25" />
+      <stop offset="100%" stopColor="#0284c7" stopOpacity="0" />
+    </radialGradient>
+
+    <!-- Glass Facade Gradients -->
+    <linearGradient id="glassFacade1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#0f172a" stopOpacity="0.88" />
+      <stop offset="30%" stopColor="#38bdf8" stopOpacity="0.5" />
+      <stop offset="70%" stopColor="#7dd3fc" stopOpacity="0.35" />
+      <stop offset="100%" stopColor="#0369a1" stopOpacity="0.75" />
+    </linearGradient>
+
+    <linearGradient id="glassFacade2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#0284c7" stopOpacity="0.7" />
+      <stop offset="50%" stopColor="#67e8f9" stopOpacity="0.3" />
+      <stop offset="100%" stopColor="#0f172a" stopOpacity="0.85" />
+    </linearGradient>
+
+    <!-- Foliage Gradients for Multi-layered Canopy -->
+    <linearGradient id="leafDeep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#22c55e" />
+      <stop offset="50%" stopColor="#15803d" />
+      <stop offset="100%" stopColor="#14532d" />
+    </linearGradient>
+
+    <linearGradient id="leafSunlit" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#86efac" />
+      <stop offset="40%" stopColor="#4ade80" />
+      <stop offset="85%" stopColor="#166534" />
+      <stop offset="100%" stopColor="#052e16" />
+    </linearGradient>
+
+    <linearGradient id="leafBright" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="#4ade80" />
+      <stop offset="50%" stopColor="#86efac" />
+      <stop offset="100%" stopColor="#22c55e" />
+    </linearGradient>
+
+    <!-- Train Body Aerodynamic Gradient -->
+    <linearGradient id="trainShell" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#ffffff" />
+      <stop offset="25%" stopColor="#e2e8f0" />
+      <stop offset="60%" stopColor="#10b981" />
+      <stop offset="100%" stopColor="#047857" />
+    </linearGradient>
+
+    <!-- Concrete Trench Infrastructure -->
+    <linearGradient id="concreteWall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#64748b" />
+      <stop offset="40%" stopColor="#475569" />
+      <stop offset="100%" stopColor="#1e293b" />
+    </linearGradient>
+
+    <linearGradient id="trenchFloor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#1e293b" />
+      <stop offset="100%" stopColor="#090d16" />
+    </linearGradient>
+
+    <!-- Headlight Radiant Glow Filter -->
+    <filter id="headlightGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur1" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky Base -->
+  <rect width="1920" height="1080" fill="url(#skyGrad)" />
+  <rect width="1920" height="1080" fill="url(#sunGlow)" />
+
+  <!-- Soft Whispy White Clouds -->
+  <g opacity="0.5" fill="#ffffff">
+    <path d="M 280 120 Q 380 70 480 100 Q 580 80 660 130 Q 720 170 620 190 Q 440 200 300 170 Z" />
+    <path d="M 980 90 Q 1080 50 1200 80 Q 1320 60 1420 110 Q 1460 160 1360 180 Q 1180 190 1000 160 Z" />
+    <path d="M 680 70 Q 760 40 840 70 Q 920 50 980 90 Q 960 130 860 135 Q 740 135 680 100 Z" />
+  </g>
+
+  <!-- Distant Background Towers (Skyline Silhouette) -->
+  <g opacity="0.6">
+    <rect x="720" y="240" width="100" height="420" fill="#94a3b8" rx="4" />
+    <rect x="840" y="200" width="110" height="460" fill="#cbd5e1" rx="4" />
+    <rect x="970" y="260" width="90" height="400" fill="#94a3b8" rx="4" />
+    <rect x="1080" y="210" width="110" height="450" fill="#cbd5e1" rx="4" />
+    <rect x="600" y="280" width="95" height="380" fill="#64748b" rx="4" />
+  </g>
+
+  <!-- ==================== LEFT SKYSCRAPERS (VERTICAL FOREST) ==================== -->
+  <!-- Tower L1: Far Left Cascading Balcony Tower -->
+  <g>
+    <rect x="40" y="30" width="280" height="780" fill="url(#glassFacade1)" rx="10" />
+    <!-- 20 Balconies with Cascading Trees and Hanging Plants -->
+    <line x1="40" y1="70" x2="320" y2="70" stroke="#bae6fd" strokeWidth="2.5" strokeOpacity="0.4" />
+    <rect x="30" y="75" width="300" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 35 85 Q 100 115 170 88 Q 240 118 315 86 Z" fill="url(#leafSunlit)" />
+    
+    <line x1="40" y1="120" x2="320" y2="120" stroke="#bae6fd" strokeWidth="2.5" strokeOpacity="0.4" />
+    <rect x="30" y="125" width="300" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 35 135 Q 90 165 160 138 Q 230 168 320 136 Z" fill="url(#leafDeep)" />
+
+    <line x1="40" y1="170" x2="320" y2="170" stroke="#bae6fd" strokeWidth="2.5" strokeOpacity="0.4" />
+    <rect x="30" y="175" width="300" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 35 185 Q 110 218 180 188 Q 250 220 315 186 Z" fill="url(#leafSunlit)" />
+
+    <line x1="40" y1="220" x2="320" y2="220" stroke="#bae6fd" strokeWidth="2.5" strokeOpacity="0.4" />
+    <rect x="30" y="225" width="300" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 35 235 Q 95 270 170 240 Q 240 272 320 238 Z" fill="url(#leafDeep)" />
+
+    <line x1="40" y1="270" x2="320" y2="270" stroke="#bae6fd" strokeWidth="2.5" strokeOpacity="0.4" />
+    <rect x="30" y="275" width="300" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 35 285 Q 105 320 185 290 Q 255 322 315 288 Z" fill="url(#leafSunlit)" />
+
+    <line x1="40" y1="320" x2="320" y2="320" stroke="#bae6fd" strokeWidth="2.5" strokeOpacity="0.4" />
+    <rect x="30" y="325" width="300" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 35 335 Q 95 370 170 340 Q 245 375 320 338 Z" fill="url(#leafDeep)" />
+
+    <line x1="40" y1="370" x2="320" y2="370" stroke="#bae6fd" strokeWidth="2.5" strokeOpacity="0.4" />
+    <rect x="30" y="375" width="300" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 35 385 Q 110 422 180 390 Q 250 425 315 388 Z" fill="url(#leafSunlit)" />
+
+    <line x1="40" y1="420" x2="320" y2="420" stroke="#bae6fd" strokeWidth="2.5" strokeOpacity="0.4" />
+    <rect x="30" y="425" width="300" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 35 435 Q 95 470 175 440 Q 245 475 320 438 Z" fill="url(#leafDeep)" />
+
+    <line x1="40" y1="470" x2="320" y2="470" stroke="#bae6fd" strokeWidth="2.5" strokeOpacity="0.4" />
+    <rect x="30" y="475" width="300" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 35 485 Q 110 522 180 490 Q 250 525 315 488 Z" fill="url(#leafSunlit)" />
+
+    <line x1="40" y1="520" x2="320" y2="520" stroke="#bae6fd" strokeWidth="2.5" strokeOpacity="0.4" />
+    <rect x="30" y="525" width="300" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 35 535 Q 95 572 170 540 Q 245 575 320 538 Z" fill="url(#leafDeep)" />
+  </g>
+
+  <!-- Tower L2: Mid-Left Bosco Verticale Tower -->
+  <g>
+    <rect x="340" y="80" width="220" height="730" fill="url(#glassFacade2)" rx="8" />
+    <rect x="330" y="115" width="240" height="8" fill="#f8fafc" rx="2" />
+    <path d="M 335 123 Q 390 148 450 126 Q 510 150 565 124 Z" fill="url(#leafBright)" />
+
+    <rect x="330" y="165" width="240" height="8" fill="#f8fafc" rx="2" />
+    <path d="M 335 173 Q 395 200 455 176 Q 515 202 565 174 Z" fill="url(#leafSunlit)" />
+
+    <rect x="330" y="215" width="240" height="8" fill="#f8fafc" rx="2" />
+    <path d="M 335 223 Q 390 250 450 226 Q 510 252 565 224 Z" fill="url(#leafDeep)" />
+
+    <rect x="330" y="265" width="240" height="8" fill="#f8fafc" rx="2" />
+    <path d="M 335 273 Q 395 302 455 276 Q 515 304 565 274 Z" fill="url(#leafBright)" />
+
+    <rect x="330" y="315" width="240" height="8" fill="#f8fafc" rx="2" />
+    <path d="M 335 323 Q 390 352 450 326 Q 510 354 565 324 Z" fill="url(#leafSunlit)" />
+
+    <rect x="330" y="365" width="240" height="8" fill="#f8fafc" rx="2" />
+    <path d="M 335 373 Q 395 404 455 376 Q 515 406 565 374 Z" fill="url(#leafDeep)" />
+
+    <rect x="330" y="415" width="240" height="8" fill="#f8fafc" rx="2" />
+    <path d="M 335 423 Q 390 454 450 426 Q 510 456 565 424 Z" fill="url(#leafBright)" />
+
+    <rect x="330" y="465" width="240" height="8" fill="#f8fafc" rx="2" />
+    <path d="M 335 473 Q 395 506 455 476 Q 515 508 565 474 Z" fill="url(#leafSunlit)" />
+
+    <rect x="330" y="515" width="240" height="8" fill="#f8fafc" rx="2" />
+    <path d="M 335 523 Q 390 556 450 526 Q 510 558 565 524 Z" fill="url(#leafDeep)" />
+  </g>
+
+  <!-- ==================== RIGHT SKYSCRAPERS (VERTICAL FOREST) ==================== -->
+  <!-- Tower R1: Center-Right Green Highrise -->
+  <g>
+    <rect x="1180" y="70" width="240" height="740" fill="url(#glassFacade1)" rx="8" />
+    <rect x="1170" y="105" width="260" height="9" fill="#f8fafc" rx="2" />
+    <path d="M 1175 114 Q 1235 140 1300 117 Q 1365 142 1425 115 Z" fill="url(#leafBright)" />
+
+    <rect x="1170" y="155" width="260" height="9" fill="#f8fafc" rx="2" />
+    <path d="M 1175 164 Q 1240 192 1305 167 Q 1370 194 1425 165 Z" fill="url(#leafSunlit)" />
+
+    <rect x="1170" y="205" width="260" height="9" fill="#f8fafc" rx="2" />
+    <path d="M 1175 214 Q 1235 244 1300 217 Q 1365 246 1425 215 Z" fill="url(#leafDeep)" />
+
+    <rect x="1170" y="255" width="260" height="9" fill="#f8fafc" rx="2" />
+    <path d="M 1175 264 Q 1240 296 1305 267 Q 1370 298 1425 265 Z" fill="url(#leafBright)" />
+
+    <rect x="1170" y="305" width="260" height="9" fill="#f8fafc" rx="2" />
+    <path d="M 1175 314 Q 1235 348 1300 317 Q 1365 350 1425 315 Z" fill="url(#leafSunlit)" />
+
+    <rect x="1170" y="355" width="260" height="9" fill="#f8fafc" rx="2" />
+    <path d="M 1175 364 Q 1240 400 1305 367 Q 1370 402 1425 365 Z" fill="url(#leafDeep)" />
+
+    <rect x="1170" y="405" width="260" height="9" fill="#f8fafc" rx="2" />
+    <path d="M 1175 414 Q 1235 452 1300 417 Q 1365 454 1425 415 Z" fill="url(#leafBright)" />
+
+    <rect x="1170" y="455" width="260" height="9" fill="#f8fafc" rx="2" />
+    <path d="M 1175 464 Q 1240 504 1305 467 Q 1370 506 1425 465 Z" fill="url(#leafSunlit)" />
+
+    <rect x="1170" y="505" width="260" height="9" fill="#f8fafc" rx="2" />
+    <path d="M 1175 514 Q 1235 556 1300 517 Q 1365 558 1425 515 Z" fill="url(#leafDeep)" />
+  </g>
+
+  <!-- Tower R2: Far Right Mega-Terrace Complex -->
+  <g>
+    <rect x="1450" y="20" width="440" height="790" fill="url(#glassFacade2)" rx="10" />
+    <rect x="1440" y="60" width="460" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 1445 70 Q 1550 100 1670 72 Q 1790 102 1895 71 Z" fill="url(#leafSunlit)" />
+
+    <rect x="1440" y="115" width="460" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 1445 125 Q 1540 156 1660 128 Q 1780 158 1895 126 Z" fill="url(#leafDeep)" />
+
+    <rect x="1440" y="170" width="460" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 1445 180 Q 1555 212 1675 182 Q 1795 214 1895 181 Z" fill="url(#leafBright)" />
+
+    <rect x="1440" y="225" width="460" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 1445 235 Q 1545 268 1665 238 Q 1785 270 1895 236 Z" fill="url(#leafSunlit)" />
+
+    <rect x="1440" y="280" width="460" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 1445 290 Q 1560 324 1680 292 Q 1800 326 1895 291 Z" fill="url(#leafDeep)" />
+
+    <rect x="1440" y="335" width="460" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 1445 345 Q 1550 380 1670 348 Q 1790 382 1895 346 Z" fill="url(#leafBright)" />
+
+    <rect x="1440" y="390" width="460" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 1445 400 Q 1565 436 1685 402 Q 1805 438 1895 401 Z" fill="url(#leafSunlit)" />
+
+    <rect x="1440" y="445" width="460" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 1445 455 Q 1555 492 1675 458 Q 1795 494 1895 456 Z" fill="url(#leafDeep)" />
+
+    <rect x="1440" y="500" width="460" height="10" fill="#e2e8f0" rx="3" />
+    <path d="M 1445 510 Q 1570 548 1690 512 Q 1810 550 1895 511 Z" fill="url(#leafBright)" />
+  </g>
+
+  <!-- ==================== STREET-LEVEL BOULEVARD & LIGHT RAIL ==================== -->
+  <g>
+    <!-- Concrete Overpass Deck across Avenue -->
+    <rect x="0" y="600" width="1920" height="70" fill="url(#concreteWall)" />
+    
+    <!-- Manicured Street Trees along the Sidewalk Promenade -->
+    <g fill="#15803d">
+      <circle cx="80" cy="595" r="24" />
+      <circle cx="160" cy="592" r="28" />
+      <circle cx="240" cy="596" r="22" />
+      <circle cx="320" cy="590" r="26" />
+      <circle cx="400" cy="595" r="25" />
+      <circle cx="480" cy="592" r="27" />
+      
+      <circle cx="1440" cy="592" r="28" />
+      <circle cx="1520" cy="595" r="24" />
+      <circle cx="1600" cy="590" r="26" />
+      <circle cx="1680" cy="596" r="25" />
+      <circle cx="1760" cy="592" r="28" />
+      <circle cx="1840" cy="595" r="24" />
+    </g>
+
+    <!-- Modern Street-Level Light Rail Electric Tram (Green & Silver) -->
+    <g transform="translate(800, 565)">
+      <rect x="0" y="0" width="160" height="35" rx="7" fill="#f8fafc" stroke="#cbd5e1" strokeWidth="1.5" />
+      <rect x="8" y="7" width="28" height="18" rx="3" fill="#0284c7" opacity="0.85" />
+      <rect x="44" y="7" width="28" height="18" rx="3" fill="#0284c7" opacity="0.85" />
+      <rect x="80" y="7" width="28" height="18" rx="3" fill="#0284c7" opacity="0.85" />
+      <rect x="116" y="7" width="36" height="18" rx="3" fill="#0284c7" opacity="0.85" />
+      <line x1="0" y1="28" x2="160" y2="28" stroke="#10b981" strokeWidth="4.5" />
+    </g>
+  </g>
+
+  <!-- ==================== PEDESTRIAN BRIDGE OVER RAIL TRENCH ==================== -->
+  <g>
+    <!-- Bridge Overpass Beam -->
+    <rect x="680" y="640" width="460" height="34" fill="#e2e8f0" rx="4" />
+    <line x1="680" y1="640" x2="1140" y2="640" stroke="#94a3b8" strokeWidth="3" />
+    <!-- Glass Safety Barrier -->
+    <rect x="685" y="622" width="450" height="18" fill="#38bdf8" opacity="0.45" rx="2" stroke="#e2e8f0" strokeWidth="1" />
+    <!-- Pedestrians walking across the bridge -->
+    <circle cx="750" cy="614" r="5" fill="#1e293b" />
+    <line x1="750" y1="619" x2="750" y2="630" stroke="#1e293b" strokeWidth="2.5" />
+    <circle cx="880" cy="614" r="5" fill="#1e293b" />
+    <line x1="880" y1="619" x2="880" y2="630" stroke="#1e293b" strokeWidth="2.5" />
+    <circle cx="980" cy="614" r="5" fill="#1e293b" />
+    <line x1="980" y1="619" x2="980" y2="630" stroke="#1e293b" strokeWidth="2.5" />
+    <circle cx="1060" cy="614" r="5" fill="#1e293b" />
+    <line x1="1060" y1="619" x2="1060" y2="630" stroke="#1e293b" strokeWidth="2.5" />
+  </g>
+
+  <!-- ==================== SUNKEN RAILWAY CORRIDOR & BULLET METRO ==================== -->
+  <g>
+    <!-- Deep Sunken Trench Pit -->
+    <polygon points="450,670 1370,670 1560,1080 260,1080" fill="url(#trenchFloor)" />
+    <!-- Concrete Retaining Trench Walls -->
+    <polygon points="260,1080 450,670 540,670 370,1080" fill="#334155" />
+    <polygon points="1370,670 1560,1080 1450,1080 1280,670" fill="#334155" />
+
+    <!-- Station Platform Safety Walkways with Tactile Yellow Stripes -->
+    <polygon points="480,700 520,700 400,1080 340,1080" fill="#475569" />
+    <polygon points="1300,700 1340,700 1440,1080 1380,1080" fill="#475569" />
+    <line x1="518" y1="700" x2="398" y2="1080" stroke="#eab308" strokeWidth="6" strokeDasharray="14 10" />
+    <line x1="1302" y1="700" x2="1402" y2="1080" stroke="#eab308" strokeWidth="6" strokeDasharray="14 10" />
+
+    <!-- Sleek Green & Silver Modern Passenger Train (Facing Forward) -->
+    <g transform="translate(730, 710)">
+      <!-- Aerodynamic Train Nose & Cab -->
+      <path
+        d="M 70 270 L 30 110 Q 35 15 125 5 Q 215 15 220 110 L 180 270 Z"
+        fill="url(#trainShell)"
+      />
+      <!-- Futuristic Wraparound Windshield -->
+      <path
+        d="M 55 90 Q 125 32 195 90 L 185 145 Q 125 115 65 145 Z"
+        fill="#0369a1"
+        stroke="#38bdf8"
+        strokeWidth="3"
+      />
+      <!-- Digital Destination Headboard -->
+      <rect x="90" y="60" width="70" height="18" fill="#0f172a" rx="3" />
+      <text x="125" y="73" fill="#4ade80" fontSize="11" fontFamily="monospace" textAnchor="middle" fontWeight="bold">
+        NEXUS-01
+      </text>
+      <!-- Radiant High-Beam LED Headlights with Bloom Glow -->
+      <circle cx="65" cy="190" r="11" fill="#fef08a" filter="url(#headlightGlow)" />
+      <circle cx="185" cy="190" r="11" fill="#fef08a" filter="url(#headlightGlow)" />
+      <circle cx="65" cy="190" r="6" fill="#ffffff" />
+      <circle cx="185" cy="190" r="6" fill="#ffffff" />
+    </g>
+
+    <!-- Outbound Train on Second Track -->
+    <g transform="translate(990, 700)">
+      <polygon points="12,85 190,75 240,300 55,310" fill="#94a3b8" opacity="0.9" />
+      <polygon points="12,85 190,75 200,110 18,125" fill="#10b981" />
+      <polygon points="30,135 190,125 195,185 35,200" fill="#0284c7" opacity="0.8" />
+    </g>
+  </g>
+</svg>
